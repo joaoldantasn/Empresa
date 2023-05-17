@@ -1,9 +1,13 @@
 package com.empresa.empresa.entities;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -14,6 +18,9 @@ public class Project {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long projectId;
 	private String projectName;
+	
+	@ManyToMany(mappedBy = "projects")
+	private Set<Employee> employees = new HashSet<>();
 	
 	public Project() {
 		
