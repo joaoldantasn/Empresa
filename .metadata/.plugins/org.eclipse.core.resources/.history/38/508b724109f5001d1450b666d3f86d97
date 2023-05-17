@@ -1,0 +1,5 @@
+package com.empresa.empresa.entities;
+
+public class Employee {
+
+}
