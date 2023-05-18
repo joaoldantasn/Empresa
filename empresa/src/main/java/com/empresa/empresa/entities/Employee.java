@@ -30,10 +30,13 @@ public class Employee {
 		
 	}
 
-	public Employee(Long empId, String empName) {
+
+	public Employee(Long empId, String empName, Set<Project> projects) {
 		this.empId = empId;
 		this.empName = empName;
+		this.projects = projects;
 	}
+
 
 	public Long getEmpId() {
 		return empId;
@@ -50,6 +53,18 @@ public class Employee {
 	public void setEmpName(String empName) {
 		this.empName = empName;
 	}
+
+
+	public Set<Project> getProjects() {
+		return projects;
+	}
+
+
+	public void setProjects(Set<Project> projects) {
+		this.projects = projects;
+	}
+	
+	
 	
 	
 	

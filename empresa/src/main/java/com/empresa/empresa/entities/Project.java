@@ -25,10 +25,12 @@ public class Project {
 	public Project() {
 		
 	}
+	
 
-	public Project(Long projectId, String projectName) {
+	public Project(Long projectId, String projectName, Set<Employee> employees) {
 		this.projectId = projectId;
 		this.projectName = projectName;
+		this.employees = employees;
 	}
 
 	public Long getProjectId() {
@@ -45,6 +47,16 @@ public class Project {
 
 	public void setProjectName(String projectName) {
 		this.projectName = projectName;
+	}
+
+
+	public Set<Employee> getEmployees() {
+		return employees;
+	}
+
+
+	public void setEmployees(Set<Employee> employees) {
+		this.employees = employees;
 	}
 	
 	
