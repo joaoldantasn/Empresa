@@ -1,0 +1,5 @@
+package com.empresa.empresa.repositories;
+
+public interface ProjectRepository {
+
+}
