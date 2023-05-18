@@ -3,6 +3,8 @@ package com.empresa.empresa.entities;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,6 +21,7 @@ public class Project {
 	private Long projectId;
 	private String projectName;
 	
+	@JsonIgnore
 	@ManyToMany(mappedBy = "projects")
 	private Set<Employee> employees = new HashSet<>();
 	
